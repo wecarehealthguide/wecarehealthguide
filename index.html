@@ -8,14 +8,14 @@
 :root{--navy:#062b70;--green:#0a9d45;--blue:#0b9eea}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#10234b;background:#fff}
 header{display:flex;align-items:center;justify-content:space-between;padding:18px 6%;background:#fff}
-.logo{font-size:30px;font-weight:800;color:var(--navy)}nav a{margin:0 14px;color:#10234b;text-decoration:none;font-weight:600}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.logo{font-size:27px;font-weight:800;color:var(--navy);letter-spacing:.3px}.logo-mark{width:42px;height:42px;flex:none}nav a{margin:0 14px;color:#10234b;text-decoration:none;font-weight:600}
 .cta{background:var(--green);color:#fff!important;padding:13px 22px;border-radius:28px}
 .hero{padding:70px 7%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff 0%,#eefaff 55%,#eaffef 100%)}
 .badge{display:inline-block;padding:10px 18px;border-radius:25px;background:#e9fbf4;color:#078bdf;font-weight:700}
 h1{font-size:64px;line-height:1.02;margin:25px 0 10px;color:var(--navy)}
 h1 span{color:var(--green)}.lead{font-size:19px;line-height:1.6}
 .quote{display:inline-block;margin-top:20px;background:var(--green);color:white;text-decoration:none;padding:17px 30px;border-radius:30px;font-size:18px;font-weight:700}
-.hero-card{min-height:390px;border-radius:45% 45% 35% 35%;background:linear-gradient(145deg,#bceeff,#d8f8df);display:flex;align-items:center;justify-content:center;font-size:120px}
+.hero-card{min-height:390px;border-radius:45% 45% 35% 35%;background:linear-gradient(145deg,#bceeff,#d8f8df);display:flex;align-items:center;justify-content:center;overflow:hidden}.hero-art{width:92%;max-width:560px;height:auto}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px 7%;background:#fff}
 .feature{padding:22px;border-radius:20px;background:#f7fbff}.feature b{display:block;font-size:18px;margin-bottom:8px}
 section{padding:65px 7%}section h2{text-align:center;color:var(--navy);font-size:36px}
@@ -25,7 +25,9 @@ footer{padding:30px 7%;background:#062b70;color:white;text-align:center}
 </head>
 <body>
 <header>
-  <div class="logo">WECARE</div>
+  <a class="brand" href="#home" aria-label="WECARE Health Insurance Guide">
+<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#e9fbf4"/><path d="M32 49S14 38 14 25c0-7 5-12 11-12 4 0 6 2 7 5 2-3 4-5 8-5 6 0 10 5 10 12 0 13-18 24-18 24Z" fill="#0a9d45"/><path d="M32 22v18M23 31h18" stroke="#062b70" stroke-width="4" stroke-linecap="round"/></svg>
+<span class="logo">WECARE</span></a>
   <nav><a href="#home">Home</a><a href="#about">About</a><a href="#plans">Health Insurance Plans</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
   <a class="cta" href="#contact">Get Free Quote →</a>
 </header>
@@ -39,7 +41,23 @@ footer{padding:30px 7%;background:#062b70;color:white;text-align:center}
   <p class="lead">Understand your health insurance options, coverage and benefits. Get clear guidance to choose suitable protection for yourself and your family.</p>
   <a class="quote" href="#contact">GET FREE QUOTE →</a>
 </div>
-<div class="hero-card">♥<br>＋</div>
+<div class="hero-card">
+<svg class="hero-art" viewBox="0 0 560 390" role="img" aria-label="Happy family protected by health insurance">
+<ellipse cx="280" cy="350" rx="185" ry="18" fill="#b5e8dc"/>
+<path d="M185 300c7-64 33-92 68-92s61 28 68 92" fill="#fff" stroke="#062b70" stroke-width="5"/>
+<circle cx="253" cy="157" r="34" fill="#ffd2b3" stroke="#062b70" stroke-width="5"/>
+<path d="M219 154c3-39 67-46 73 1-17-12-37-16-73-1Z" fill="#062b70"/>
+<path d="M195 302c5-67 31-98 58-98h1v98Z" fill="#79c7ef"/>
+<path d="M268 204h8c29 0 54 33 59 98h-67Z" fill="#0a9d45"/>
+<circle cx="178" cy="184" r="27" fill="#ffd2b3" stroke="#062b70" stroke-width="5"/>
+<path d="M149 302c4-55 23-79 49-79 19 0 35 22 40 79Z" fill="#f4c84d" stroke="#062b70" stroke-width="5"/>
+<circle cx="379" cy="190" r="28" fill="#ffd2b3" stroke="#062b70" stroke-width="5"/>
+<path d="M347 302c4-57 22-82 48-82 24 0 43 26 48 82Z" fill="#f28f8f" stroke="#062b70" stroke-width="5"/>
+<path d="M280 73c-16-27-58-7-45 25 9 23 45 45 45 45s36-22 45-45c13-32-29-52-45-25Z" fill="#062b70"/>
+<path d="M280 86v34M263 103h34" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+<circle cx="105" cy="93" r="18" fill="#fff" opacity=".75"/><path d="M105 82v22M94 93h22" stroke="#0a9d45" stroke-width="4" stroke-linecap="round"/>
+<circle cx="455" cy="100" r="18" fill="#fff" opacity=".75"/><path d="M455 89v22M444 100h22" stroke="#0a9d45" stroke-width="4" stroke-linecap="round"/>
+</svg></div>
 </section>
 
 <div class="features">
