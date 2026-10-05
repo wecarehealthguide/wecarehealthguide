@@ -2,78 +2,97 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WECARE – Health Insurance Guide</title>
+<meta name="description" content="WECARE – Simple Guidance. Smarter Protection. Get clear health insurance guidance for yourself and your family.">
 <style>
-:root{--navy:#062b70;--green:#0a9d45;--blue:#0b9eea}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#10234b;background:#fff}
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 6%;background:#fff}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.logo{font-size:27px;font-weight:800;color:var(--navy);letter-spacing:.3px}.logo-mark{width:42px;height:42px;flex:none}nav a{margin:0 14px;color:#10234b;text-decoration:none;font-weight:600}
-.cta{background:var(--green);color:#fff!important;padding:13px 22px;border-radius:28px}
-.hero{padding:70px 7%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff 0%,#eefaff 55%,#eaffef 100%)}
-.badge{display:inline-block;padding:10px 18px;border-radius:25px;background:#e9fbf4;color:#078bdf;font-weight:700}
-h1{font-size:64px;line-height:1.02;margin:25px 0 10px;color:var(--navy)}
-h1 span{color:var(--green)}.lead{font-size:19px;line-height:1.6}
-.quote{display:inline-block;margin-top:20px;background:var(--green);color:white;text-decoration:none;padding:17px 30px;border-radius:30px;font-size:18px;font-weight:700}
-.hero-card{min-height:390px;border-radius:45% 45% 35% 35%;background:linear-gradient(145deg,#bceeff,#d8f8df);display:flex;align-items:center;justify-content:center;overflow:hidden}.hero-art{width:92%;max-width:560px;height:auto}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:30px 7%;background:#fff}
-.feature{padding:22px;border-radius:20px;background:#f7fbff}.feature b{display:block;font-size:18px;margin-bottom:8px}
-section{padding:65px 7%}section h2{text-align:center;color:var(--navy);font-size:36px}
-footer{padding:30px 7%;background:#062b70;color:white;text-align:center}
-@media(max-width:800px){header{flex-wrap:wrap;gap:15px}nav{display:none}.hero{grid-template-columns:1fr;padding:45px 6%}h1{font-size:44px}.features{grid-template-columns:1fr 1fr}.hero-card{min-height:280px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#0b214f;background:#fff}
+.hero{position:relative;width:100%;overflow:hidden}
+.hero img{display:block;width:100%;height:auto}
+.hero-links a{position:absolute;top:5.5%;height:7%;display:block;text-decoration:none}
+.home{left:49%;width:6%}.about{left:57%;width:6%}.plans{left:64.5%;width:14%}
+.faq{left:80.5%;width:5%}.contact{left:86.5%;width:7%}
+.quote{left:8%;top:69%;width:27%;height:11%}
+section{padding:70px 8%;text-align:center}
+section h2{font-size:38px;margin:0 0 18px;color:#0b214f}
+section p{max-width:850px;margin:0 auto;line-height:1.7;font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}
+.card{padding:30px;border-radius:24px;background:linear-gradient(135deg,#effcff,#f2fff7);border:1px solid #d9f1ed}
+.card h3{margin:10px 0;color:#0b214f}
+.contact-box{max-width:760px;margin:30px auto;padding:35px;border-radius:25px;background:#f1fbff}
+form{display:grid;gap:14px;text-align:left}
+input,select,textarea{width:100%;padding:14px;border:1px solid #cbd8e5;border-radius:10px;font-size:16px}
+button{border:0;border-radius:28px;padding:15px 28px;background:#0a9d45;color:white;font-size:17px;font-weight:700;cursor:pointer}
+footer{background:#062b70;color:white;text-align:center;padding:28px}
+@media(max-width:700px){
+.hero-links a{top:4%;height:6%}
+.home{left:48%;width:9%}.about{left:60%;width:8%}.plans{left:70%;width:18%}
+.faq{left:88%;width:7%}.contact{display:none}.quote{left:9%;top:68%;width:35%;height:10%}
+.cards{grid-template-columns:1fr}
+section{padding:50px 6%}
+}
 </style>
 </head>
 <body>
-<header>
-  <a class="brand" href="#home" aria-label="WECARE Health Insurance Guide">
-<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#e9fbf4"/><path d="M32 49S14 38 14 25c0-7 5-12 11-12 4 0 6 2 7 5 2-3 4-5 8-5 6 0 10 5 10 12 0 13-18 24-18 24Z" fill="#0a9d45"/><path d="M32 22v18M23 31h18" stroke="#062b70" stroke-width="4" stroke-linecap="round"/></svg>
-<span class="logo">WECARE</span></a>
-  <nav><a href="#home">Home</a><a href="#about">About</a><a href="#plans">Health Insurance Plans</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
-  <a class="cta" href="#contact">Get Free Quote →</a>
+
+<header class="hero" id="home">
+  <img src="wecare-banner.png" alt="WECARE Health Insurance Guide – Simple Guidance. Smarter Protection.">
+  <div class="hero-links" aria-label="Main navigation">
+    <a class="home" href="#home" aria-label="Home"></a>
+    <a class="about" href="#about" aria-label="About"></a>
+    <a class="plans" href="#plans" aria-label="Health Insurance Plans"></a>
+    <a class="faq" href="#faq" aria-label="FAQ"></a>
+    <a class="contact" href="#contact" aria-label="Contact"></a>
+    <a class="quote" href="#contact" aria-label="Get Free Quote"></a>
+  </div>
+  <h1 style="position:absolute;left:-9999px">WECARE – Health Insurance Guide</h1>
 </header>
 
-<main id="home">
-<section class="hero">
-<div>
-  <div class="badge">✓ Your Health · Our Priority</div>
-  <h1>WECARE<br><span>Simple Guidance.<br>Smarter Protection.</span></h1>
-  <h2 style="text-align:left;font-size:24px">Health Insurance Made Simple</h2>
-  <p class="lead">Understand your health insurance options, coverage and benefits. Get clear guidance to choose suitable protection for yourself and your family.</p>
-  <a class="quote" href="#contact">GET FREE QUOTE →</a>
-</div>
-<div class="hero-card">
-<svg class="hero-art" viewBox="0 0 560 390" role="img" aria-label="Happy family protected by health insurance">
-<ellipse cx="280" cy="350" rx="185" ry="18" fill="#b5e8dc"/>
-<path d="M185 300c7-64 33-92 68-92s61 28 68 92" fill="#fff" stroke="#062b70" stroke-width="5"/>
-<circle cx="253" cy="157" r="34" fill="#ffd2b3" stroke="#062b70" stroke-width="5"/>
-<path d="M219 154c3-39 67-46 73 1-17-12-37-16-73-1Z" fill="#062b70"/>
-<path d="M195 302c5-67 31-98 58-98h1v98Z" fill="#79c7ef"/>
-<path d="M268 204h8c29 0 54 33 59 98h-67Z" fill="#0a9d45"/>
-<circle cx="178" cy="184" r="27" fill="#ffd2b3" stroke="#062b70" stroke-width="5"/>
-<path d="M149 302c4-55 23-79 49-79 19 0 35 22 40 79Z" fill="#f4c84d" stroke="#062b70" stroke-width="5"/>
-<circle cx="379" cy="190" r="28" fill="#ffd2b3" stroke="#062b70" stroke-width="5"/>
-<path d="M347 302c4-57 22-82 48-82 24 0 43 26 48 82Z" fill="#f28f8f" stroke="#062b70" stroke-width="5"/>
-<path d="M280 73c-16-27-58-7-45 25 9 23 45 45 45 45s36-22 45-45c13-32-29-52-45-25Z" fill="#062b70"/>
-<path d="M280 86v34M263 103h34" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-<circle cx="105" cy="93" r="18" fill="#fff" opacity=".75"/><path d="M105 82v22M94 93h22" stroke="#0a9d45" stroke-width="4" stroke-linecap="round"/>
-<circle cx="455" cy="100" r="18" fill="#fff" opacity=".75"/><path d="M455 89v22M444 100h22" stroke="#0a9d45" stroke-width="4" stroke-linecap="round"/>
-</svg></div>
+<section id="about">
+  <h2>Health Insurance Made Simple</h2>
+  <p>Understand your health insurance options, coverage and benefits. Get clear guidance to choose suitable protection for yourself and your family.</p>
 </section>
 
-<div class="features">
-<div class="feature"><b>🛡 Compare Plans Easily</b>Understand options before you choose.</div>
-<div class="feature"><b>👥 Expert Guidance</b>Get help understanding your requirements.</div>
-<div class="feature"><b>📄 Protection for Your Family</b>Explore suitable coverage.</div>
-<div class="feature"><b>💚 Simple Process</b>Submit your enquiry quickly.</div>
-</div>
+<section id="plans">
+  <h2>Health Insurance Plans</h2>
+  <div class="cards">
+    <div class="card"><h3>Family Protection</h3><p>Explore coverage options designed for family healthcare needs.</p></div>
+    <div class="card"><h3>Individual Protection</h3><p>Understand individual health insurance coverage and benefits.</p></div>
+    <div class="card"><h3>Plan Comparison</h3><p>Compare important features, coverage and policy terms before choosing.</p></div>
+  </div>
+</section>
 
-<section id="about"><h2>Health Insurance Guidance</h2><p style="max-width:800px;margin:auto;text-align:center;line-height:1.7">We help visitors understand health insurance coverage, benefits, exclusions and plan features so they can make informed decisions.</p></section>
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="cards">
+    <div class="card"><h3>What is health insurance?</h3><p>Health insurance helps cover eligible medical and hospitalization expenses according to the policy terms.</p></div>
+    <div class="card"><h3>How do I choose a plan?</h3><p>Consider coverage, waiting periods, exclusions, limits, premium and your family's requirements.</p></div>
+    <div class="card"><h3>Need help?</h3><p>Send your requirement through the enquiry form and we can guide you on the available options.</p></div>
+  </div>
+</section>
 
-<section id="plans"><h2>Health Insurance Plans</h2><p style="text-align:center">Add your approved product information, features and benefits here.</p></section>
+<section id="contact">
+  <h2>Get Free Quote</h2>
+  <div class="contact-box">
+    <form action="#" method="post" onsubmit="event.preventDefault();alert('Thank you! Your enquiry form is ready to be connected to Google Forms/Sheets.');">
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Mobile Number" required>
+      <input type="email" placeholder="Email Address">
+      <select required>
+        <option value="">Select Requirement</option>
+        <option>Family Health Insurance</option>
+        <option>Individual Health Insurance</option>
+        <option>Senior Citizen Health Insurance</option>
+        <option>Plan Comparison</option>
+      </select>
+      <textarea rows="4" placeholder="Your requirement"></textarea>
+      <button type="submit">GET FREE QUOTE →</button>
+    </form>
+  </div>
+</section>
 
-<section id="faq"><h2>Frequently Asked Questions</h2><p style="max-width:800px;margin:auto;line-height:1.8"><b>How can I get a quote?</b><br>Submit the enquiry form and our team can contact you.<br><br><b>Can I compare plans?</b><br>Yes. Add the products and features you want visitors to compare.</p></section>
-
-<section id="contact"><h2>Get Your Free Quote</h2><p style="text-align:center">Add your Google Form link to this section/button.</p><p style="text-align:center"><a class="quote" href="https://forms.google.com/">START ENQUIRY →</a></p></section>
-</main>
-<footer>WECARE – Health Insurance Guide<br><small>Information is for guidance only. Policy terms, conditions, exclusions and eligibility apply as per the insurer's official documents.</small></footer>
-</body></html>
+<footer>© 2026 WECARE – Health Insurance Guide | Simple Guidance. Smarter Protection.</footer>
+</body>
+</html>
