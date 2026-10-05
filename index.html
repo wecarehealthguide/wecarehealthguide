@@ -4,95 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WECARE – Health Insurance Guide</title>
-<meta name="description" content="WECARE – Simple Guidance. Smarter Protection. Get clear health insurance guidance for yourself and your family.">
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#0b214f;background:#fff}
-.hero{position:relative;width:100%;overflow:hidden}
-.hero img{display:block;width:100%;height:auto}
-.hero-links a{position:absolute;top:5.5%;height:7%;display:block;text-decoration:none}
-.home{left:49%;width:6%}.about{left:57%;width:6%}.plans{left:64.5%;width:14%}
-.faq{left:80.5%;width:5%}.contact{left:86.5%;width:7%}
-.quote{left:8%;top:69%;width:27%;height:11%}
-section{padding:70px 8%;text-align:center}
-section h2{font-size:38px;margin:0 0 18px;color:#0b214f}
-section p{max-width:850px;margin:0 auto;line-height:1.7;font-size:18px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}
-.card{padding:30px;border-radius:24px;background:linear-gradient(135deg,#effcff,#f2fff7);border:1px solid #d9f1ed}
-.card h3{margin:10px 0;color:#0b214f}
-.contact-box{max-width:760px;margin:30px auto;padding:35px;border-radius:25px;background:#f1fbff}
-form{display:grid;gap:14px;text-align:left}
-input,select,textarea{width:100%;padding:14px;border:1px solid #cbd8e5;border-radius:10px;font-size:16px}
-button{border:0;border-radius:28px;padding:15px 28px;background:#0a9d45;color:white;font-size:17px;font-weight:700;cursor:pointer}
-footer{background:#062b70;color:white;text-align:center;padding:28px}
+html,body{margin:0;padding:0;background:#fff}
+.page{position:relative;width:100%;line-height:0}
+.page img{display:block;width:100%;height:auto}
+.page a{position:absolute;display:block;z-index:2}
+.home{left:49%;top:5%;width:6%;height:8%}
+.about{left:58%;top:5%;width:6%;height:8%}
+.plans{left:65%;top:5%;width:14%;height:8%}
+.faq{left:81%;top:5%;width:5%;height:8%}
+.contact{left:87%;top:5%;width:7%;height:8%}
+.quote{left:8%;top:68%;width:27%;height:12%}
 @media(max-width:700px){
-.hero-links a{top:4%;height:6%}
-.home{left:48%;width:9%}.about{left:60%;width:8%}.plans{left:70%;width:18%}
-.faq{left:88%;width:7%}.contact{display:none}.quote{left:9%;top:68%;width:35%;height:10%}
-.cards{grid-template-columns:1fr}
-section{padding:50px 6%}
+  .home{left:48%;top:4%;width:9%;height:7%}
+  .about{left:59%;top:4%;width:9%;height:7%}
+  .plans{left:69%;top:4%;width:20%;height:7%}
+  .faq{left:89%;top:4%;width:8%;height:7%}
+  .contact{display:none}
+  .quote{left:8%;top:67%;width:37%;height:12%}
 }
 </style>
 </head>
 <body>
-
-<header class="hero" id="home">
-  <img src="wecare-banner.png" alt="WECARE Health Insurance Guide – Simple Guidance. Smarter Protection.">
-  <div class="hero-links" aria-label="Main navigation">
-    <a class="home" href="#home" aria-label="Home"></a>
-    <a class="about" href="#about" aria-label="About"></a>
-    <a class="plans" href="#plans" aria-label="Health Insurance Plans"></a>
-    <a class="faq" href="#faq" aria-label="FAQ"></a>
-    <a class="contact" href="#contact" aria-label="Contact"></a>
-    <a class="quote" href="#contact" aria-label="Get Free Quote"></a>
-  </div>
-  <h1 style="position:absolute;left:-9999px">WECARE – Health Insurance Guide</h1>
-</header>
-
-<section id="about">
-  <h2>Health Insurance Made Simple</h2>
-  <p>Understand your health insurance options, coverage and benefits. Get clear guidance to choose suitable protection for yourself and your family.</p>
-</section>
-
-<section id="plans">
-  <h2>Health Insurance Plans</h2>
-  <div class="cards">
-    <div class="card"><h3>Family Protection</h3><p>Explore coverage options designed for family healthcare needs.</p></div>
-    <div class="card"><h3>Individual Protection</h3><p>Understand individual health insurance coverage and benefits.</p></div>
-    <div class="card"><h3>Plan Comparison</h3><p>Compare important features, coverage and policy terms before choosing.</p></div>
-  </div>
-</section>
-
-<section id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="cards">
-    <div class="card"><h3>What is health insurance?</h3><p>Health insurance helps cover eligible medical and hospitalization expenses according to the policy terms.</p></div>
-    <div class="card"><h3>How do I choose a plan?</h3><p>Consider coverage, waiting periods, exclusions, limits, premium and your family's requirements.</p></div>
-    <div class="card"><h3>Need help?</h3><p>Send your requirement through the enquiry form and we can guide you on the available options.</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Get Free Quote</h2>
-  <div class="contact-box">
-    <form action="#" method="post" onsubmit="event.preventDefault();alert('Thank you! Your enquiry form is ready to be connected to Google Forms/Sheets.');">
-      <input type="text" placeholder="Full Name" required>
-      <input type="tel" placeholder="Mobile Number" required>
-      <input type="email" placeholder="Email Address">
-      <select required>
-        <option value="">Select Requirement</option>
-        <option>Family Health Insurance</option>
-        <option>Individual Health Insurance</option>
-        <option>Senior Citizen Health Insurance</option>
-        <option>Plan Comparison</option>
-      </select>
-      <textarea rows="4" placeholder="Your requirement"></textarea>
-      <button type="submit">GET FREE QUOTE →</button>
-    </form>
-  </div>
-</section>
-
-<footer>© 2026 WECARE – Health Insurance Guide | Simple Guidance. Smarter Protection.</footer>
+<div class="page">
+  <img src="wecare-home.png" alt="WECARE Health Insurance Guide">
+  <a class="home" href="#" aria-label="Home"></a>
+  <a class="about" href="#about" aria-label="About"></a>
+  <a class="plans" href="#plans" aria-label="Health Insurance Plans"></a>
+  <a class="faq" href="#faq" aria-label="FAQ"></a>
+  <a class="contact" href="#contact" aria-label="Contact"></a>
+  <a class="quote" href="#contact" aria-label="Get Free Quote"></a>
+</div>
+<div id="about"></div>
+<div id="plans"></div>
+<div id="faq"></div>
+<div id="contact"></div>
 </body>
 </html>
